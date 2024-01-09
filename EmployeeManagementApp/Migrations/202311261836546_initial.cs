@@ -18,13 +18,13 @@
                     })
                 .PrimaryKey(t => t.Id);
             
-            DropTable("dbo.TaskModels");
+            DropTable("dbo.EmployeeModels");
         }
         
         public override void Down()
         {
             CreateTable(
-                "dbo.TaskModels",
+                "dbo.EmployeeModels",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),

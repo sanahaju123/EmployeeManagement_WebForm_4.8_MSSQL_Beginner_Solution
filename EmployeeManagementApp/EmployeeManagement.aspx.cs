@@ -43,7 +43,7 @@ namespace EmployeeManagementApp
             }
         }
 
-        protected void btnsave_Click(object sender, EventArgs e)
+        protected void btnSave_Click(object sender, EventArgs e)
         {
             var newEmployee = new EmployeeModel
             {
@@ -56,7 +56,7 @@ namespace EmployeeManagementApp
             BindGridView();
         }
 
-        protected void btnupdate_Click(object sender, EventArgs e)
+        protected void btnUpdate_Click(object sender, EventArgs e)
         {
             string id = gv.SelectedRow.Cells[1].Text.ToString();
             var existingEmployee = _employeeService.GetById(id);
@@ -72,7 +72,7 @@ namespace EmployeeManagementApp
             }
         }
 
-        protected void btndlt_Click(object sender, EventArgs e)
+        protected void btnDelete_Click(object sender, EventArgs e)
         {
             string id = gv.SelectedRow.Cells[1].Text.ToString();
             _employeeService.Delete();
